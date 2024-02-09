@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="quizmain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="quizmain.js"></script>
+    <title>HTML5 - Internal Exam (Aptech) </title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="preloader">
+        <img src="./1*Gvgic29bgoiGVLmI6AVbUg.gif" alt="loading..." id="loader">
+    </div>
+    <div class="login" id="login-div">
+        <img src="./aptechlogo.png" alt="Aptech Logo" width="100">
+        <input type="text" placeholder="Enter your ExamID" id="examID" autofocus>
+        <input type="submit" value="Start Exam" id="login">
+        <span id="msg"></span>
+    </div>
+    <div class="app">
+        <!-- <h1>HTML5 Internal Examination</h1> -->
+        <div class="student-info">
+            <div class="std-name" id="std-name"></div>
+            <div class="timer" id="count">Timer</div>
+        </div>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-button">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+            <button id="logout-btn">logout</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial Unicode MS;
+}
+
+body{
+    background: #FCFCFF url('./mainbg.svg');
+}
+
+.login {
+    /* background-color: black; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login input {
+    display: block;
+    margin-block: 15px;
+}
+
+.login input[type = 'text'] {
+    width: 300px;
+    padding: 12px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #0e0e0e;
+    font-size: 14px;
+}
+.login input[type = 'text']::placeholder {
+    color: #363535;
+}
+
+.login input[type = 'submit'] {
+    width: 300px;
+    padding: 15px 10px;
+    background-color: black;
+    border: 2px solid #001e4d;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+#msg {
+    /* width: 500px; */
+    display: none;
+    background-color: rgba(213, 153, 41, 0.64);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+.preloader img{
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}
+
+.preloader #loader {
+    display: none;
+}
+
+.app{
+    background-color: #fff;
+    width: 90%;
+    max-width: 700px;
+    /* margin: 100px auto 0; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 2px 3px black;
+}
+
+.app h1{
+     font-weight: 24px;
+     color: rgb(40, 39, 39);
+     font-weight: 600;
+     border-bottom: 1px solid #333;
+     padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 50px 0;
+}
+
+.quiz h2{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+#answer-button{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+
+.btn{
+    background: #fff;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 12px;
+    margin: 6px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background: #222;
+    color: white;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: transparent;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1.5px solid rgb(28, 29, 28);
+    padding: 10px;
+    margin: 30px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    /* display: none; */
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+#logout-btn{
+    background: rgb(156, 6, 6);
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    border: 1.5px solid rgb(156, 6, 6);
+    padding: 10px;
+    margin: 30px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+
+#next-btn:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.correct{
+    background: #9aeabc;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.student-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #0d0d0d;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.student-info .std-name {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.student-info .std-name img {
+    width: 15px;
+}
+
+@keyframes blink {
+    0%{
+            background-color: white;  
+    }
+
+    50%{
+        background-color: #9aeabc;
+    }
+
+    100%{
+        background-color: white;
+    }
+    
+}
+
+.incorrect{
+    color: white;
+    background-color: rgb(252, 0, 0);
+    
+}
+
+.bg-correct{
+    background-color: green;
+}
+
+.bg-incorrect{
+    background-color: red;
+}
+
+@media (max-width: 600px) {
+    #answer-button{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+    }
+}
+
+
